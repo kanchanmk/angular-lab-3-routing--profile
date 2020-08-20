@@ -1,0 +1,80 @@
+<section class="editSection">
+	<strong>Use the form below to update your profile</strong>
+	<div *ngIf="seeImgContainer">
+		<img
+			class="image"
+			src="/assets/images/c3po.jpg"
+			id="image2"
+			name="image2"
+			alt=""
+			srcset=""
+		/>
+		<img
+			class="image"
+			src="/assets/images/chewy.jpg"
+			id="image3"
+			name="image3"
+			alt=""
+			srcset=""
+			(click)="setSelected('/assets/images/chewy.jpg')"
+		/>
+		<img
+			class="image"
+			src="{{ selectedImage }}"
+			id="image4"
+			name="image4"
+			alt=""
+			srcset=""
+			(click)="setSelected('/assets/images/han_solo.jpg')"
+		/>
+		<img
+			class="image"
+			src="/assets/images/r2d2_640.jpg"
+			id="image5"
+			name="image5"
+			alt=""
+			srcset=""
+		/>
+		<img
+			class="image"
+			src="/assets/images/vader.jpg"
+			id="image6"
+			name="image6"
+			alt=""
+			srcset=""
+		/>
+	</div>
+	<button (click)="toggleImageContainer()">+</button>
+	<form #editForm="ngForm" (ngSubmit)="updateProfile(editForm)" class="form">
+		<div>
+			<img
+				class="selectImage"
+				src="/assets/images/woman_profile.png"
+				id="image1"
+				name="image1"
+				alt=""
+				srcset=""
+			/>
+		</div>
+		<label for="name">Name</label>
+		<input type="text" name="name" id="name" [(ngModel)]="currentUser.name" />
+		<label for="contact">Contact</label>
+		<input
+			type="text"
+			name="contact"
+			id="contact"
+			[(ngModel)]="currentUser.contact"
+		/>
+		<label for="bio">Bio</label>
+		<textarea
+			name="bio"
+			id="bio"
+			cols="30"
+			rows="10"
+			[(ngModel)]="currentUser.bio"
+			class="textarea"
+		></textarea>
+
+		<button routerLink="/profile">Update</button>
+	</form>
+</section>

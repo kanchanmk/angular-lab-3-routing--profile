@@ -1,0 +1,35 @@
+.editSection * {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	height: 500px;
+}
+
+textarea {
+	border-radius: 10px;
+}
+
+.selectImage {
+	/* background-image: url("/assets/images/woman_profile.png"); */
+	width: 300px;
+	height: 400px;
+	object-fit: cover;
+	background-color: blue;
+	border-radius: 10px;
+	margin: 10px;
+}
+
+.image {
+	/* background-image: url("/assets/images/woman_profile.png"); */
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+	background-color: blue;
+	border-radius: 10px;
+	margin: 10px;
+}

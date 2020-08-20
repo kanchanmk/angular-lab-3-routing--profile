@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+input,
+button {
+	border-radius: 10px;
+	height: 30px;
+}
+
+button {
+	background-color: #505355;
+	color: white;
+	margin-top: 10px;
+}
+
+label {
+	color: #1ecefd;
+}
+
+button:hover {
+	background-color: #5becd8;
+}
